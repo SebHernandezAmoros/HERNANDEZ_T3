@@ -1,0 +1,17 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h1>Inicio de secion</h1>
+            <form method="post" action="/auth/login">
+
+                <label for="username">Ingrese usuario:</label>
+                <input type="text" class="form-control" name="username">
+                <label for="password">Ingrese contraseña:</label>
+                <input type="password" class="form-control" name="password">
+                <p class="text-danger">@Html.ValidationMessage("AuthError")</p>
+                <br />
+                <button class="btn btn-primary">login</button>
+            </form>
+        </div>
+    </div>
+</div>

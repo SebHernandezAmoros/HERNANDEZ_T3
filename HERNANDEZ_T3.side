@@ -1,0 +1,336 @@
+{
+  "id": "ade60195-c48e-455b-8e4c-b4033e24d6b0",
+  "version": "2.0",
+  "name": "HERNANDEZ_T3",
+  "url": "https://localhost:44320",
+  "tests": [{
+    "id": "dd4176e7-afc3-4339-b6cd-5d42a8e598f4",
+    "name": "Login Correcto",
+    "commands": [{
+      "id": "7bcae893-ce26-405c-8f8b-16dd436035de",
+      "comment": "",
+      "command": "open",
+      "target": "/Auth",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "966d1eae-5b34-4b9d-bb9c-94cd46e110d4",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.form-control:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "08a109b4-aa8a-4203-b278-04c56625617d",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.form-control:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "User1"
+    }, {
+      "id": "4396c342-e979-4400-bb57-5361c3035ca4",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.form-control:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "5eb9adc3-c1a7-47c0-9822-59a0facfcc07",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "fc365428-d327-4043-895b-297c13c2f57a",
+    "name": "Create Correcto",
+    "commands": [{
+      "id": "97a00980-82c3-4ade-8c71-17d11028d42e",
+      "comment": "",
+      "command": "open",
+      "target": "/Auth",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "40b53bbb-7a6d-4a23-a681-6696385958e8",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.form-control:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "User1"
+    }, {
+      "id": "f50a0223-4db6-4961-b74f-eff88001776b",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.form-control:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "5ec0d079-1b6b-44c5-a2e2-32397bce11e4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "001bafb3-652d-488d-903b-c9e6624bd17d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=MainTitulo",
+      "targets": [
+        ["id=MainTitulo", "id"],
+        ["css=#MainTitulo", "css:finder"],
+        ["xpath=//h1[@id='MainTitulo']", "xpath:attributes"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Mascotas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6c8295a-963f-4b63-9c19-0e662b444686",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nueva mascota",
+      "targets": [
+        ["linkText=Nueva mascota", "linkText"],
+        ["css=.btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Nueva mascota')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/mascota/createnew')]", "xpath:href"],
+        ["xpath=//main/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nueva mascota')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6076ca86-556a-4466-8b56-20a60965a6b3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=NuevaMascota",
+      "targets": [
+        ["id=NuevaMascota", "id"],
+        ["css=#NuevaMascota", "css:finder"],
+        ["xpath=//h1[@id='NuevaMascota']", "xpath:attributes"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Nueva mascota')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d707143-f7ac-42cd-85aa-a02656bd0485",
+      "comment": "",
+      "command": "click",
+      "target": "id=Nombre",
+      "targets": [
+        ["id=Nombre", "id"],
+        ["name=Nombre", "name"],
+        ["css=#Nombre", "css:finder"],
+        ["xpath=//input[@id='Nombre']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa4ed1eb-a77b-48db-8cd4-b87e3d8b84a3",
+      "comment": "",
+      "command": "type",
+      "target": "id=Nombre",
+      "targets": [
+        ["id=Nombre", "id"],
+        ["name=Nombre", "name"],
+        ["css=#Nombre", "css:finder"],
+        ["xpath=//input[@id='Nombre']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "DAnte"
+    }, {
+      "id": "10e7b489-e514-4748-863a-3c5bf7f3f144",
+      "comment": "",
+      "command": "click",
+      "target": "id=FechaNacimiento",
+      "targets": [
+        ["id=FechaNacimiento", "id"],
+        ["name=FechaNacimiento", "name"],
+        ["css=#FechaNacimiento", "css:finder"],
+        ["xpath=//input[@id='FechaNacimiento']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e14be173-4cfb-48e7-a406-c3aa14a602c2",
+      "comment": "",
+      "command": "type",
+      "target": "id=FechaNacimiento",
+      "targets": [
+        ["id=FechaNacimiento", "id"],
+        ["name=FechaNacimiento", "name"],
+        ["css=#FechaNacimiento", "css:finder"],
+        ["xpath=//input[@id='FechaNacimiento']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "2021-01-04"
+    }, {
+      "id": "a4d7b5c5-2fdf-467a-b1d2-dd17b0cae3f2",
+      "comment": "",
+      "command": "click",
+      "target": "id=Sexo",
+      "targets": [
+        ["id=Sexo", "id"],
+        ["name=Sexo", "name"],
+        ["css=#Sexo", "css:finder"],
+        ["xpath=//select[@id='Sexo']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5f4b913-4180-4054-897a-f18408a1e470",
+      "comment": "",
+      "command": "select",
+      "target": "id=Sexo",
+      "targets": [],
+      "value": "label=Macho"
+    }, {
+      "id": "7fa81815-fb00-47c0-b0ef-acffd688a4c2",
+      "comment": "",
+      "command": "select",
+      "target": "id=Especie",
+      "targets": [],
+      "value": "label=Gato"
+    }, {
+      "id": "2410e42a-2c5b-4fb0-8d7c-8a0cff7aef14",
+      "comment": "",
+      "command": "select",
+      "target": "id=Raza",
+      "targets": [],
+      "value": "label=Angora(Gato)"
+    }, {
+      "id": "67412799-3f24-46f2-b3c6-d5fd8c750029",
+      "comment": "",
+      "command": "type",
+      "target": "id=NombTamanore",
+      "targets": [
+        ["id=NombTamanore", "id"],
+        ["name=Tamano", "name"],
+        ["css=#NombTamanore", "css:finder"],
+        ["xpath=//input[@id='NombTamanore']", "xpath:attributes"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "45"
+    }, {
+      "id": "46b7ba1a-a26e-4e1e-ad26-b2e8738ac22d",
+      "comment": "",
+      "command": "type",
+      "target": "id=NombreDueño",
+      "targets": [
+        ["id=NombreDueño", "id"],
+        ["name=NombreDueño", "name"],
+        ["css=#NombreDue\\F1o", "css:finder"],
+        ["xpath=//input[@id='NombreDueño']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "Jorge Espinoza"
+    }, {
+      "id": "60c8057f-7067-468e-8a8c-e29f84bda36d",
+      "comment": "",
+      "command": "type",
+      "target": "id=Direccion",
+      "targets": [
+        ["id=Direccion", "id"],
+        ["name=Direccion", "name"],
+        ["css=#Direccion", "css:finder"],
+        ["xpath=//input[@id='Direccion']", "xpath:attributes"],
+        ["xpath=//div[9]/input", "xpath:position"]
+      ],
+      "value": "Av Paper 456"
+    }, {
+      "id": "c049eea5-c12a-49b4-bb68-21ecc1466a63",
+      "comment": "",
+      "command": "type",
+      "target": "id=Telefono",
+      "targets": [
+        ["id=Telefono", "id"],
+        ["name=Telefono", "name"],
+        ["css=#Telefono", "css:finder"],
+        ["xpath=//input[@id='Telefono']", "xpath:attributes"],
+        ["xpath=//div[10]/input", "xpath:position"]
+      ],
+      "value": "7895486"
+    }, {
+      "id": "8b3d5b36-f17a-4ece-bd3c-0f39e584d4e9",
+      "comment": "",
+      "command": "type",
+      "target": "id=Email",
+      "targets": [
+        ["id=Email", "id"],
+        ["name=Email", "name"],
+        ["css=#Email", "css:finder"],
+        ["xpath=//input[@id='Email']", "xpath:attributes"],
+        ["xpath=//div[11]/input", "xpath:position"]
+      ],
+      "value": "correoFalso@hotmail.com"
+    }, {
+      "id": "28bcb65f-2a8e-4eb1-9714-1467a6f01d21",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Guardar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f68953c2-04b1-482d-bbf1-ada9401502d5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=MainTitulo",
+      "targets": [
+        ["id=MainTitulo", "id"],
+        ["css=#MainTitulo", "css:finder"],
+        ["xpath=//h1[@id='MainTitulo']", "xpath:attributes"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Mascotas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "b34e74df-43f2-46ab-9392-318a1fb6e407",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["dd4176e7-afc3-4339-b6cd-5d42a8e598f4"]
+  }],
+  "urls": ["https://localhost:44320/"],
+  "plugins": []
+}

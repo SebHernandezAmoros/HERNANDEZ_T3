@@ -1,0 +1,91 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h1 id="NuevaMascota">Nueva mascota</h1>
+            <form action="/mascota/createnew" method="post">
+                <div class="mb-3">
+                    <label for="Nombre">Nombre</label>
+                    <input type="text" class="form-control" name="Nombre" id="Nombre" value="@Model.Nombre">
+                    @Html.ValidationMessage("Nombre")
+                </div>
+                <div>
+                    <label for="FechaNacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="FechaNacimiento" name="FechaNacimiento" value="@Model.FechaNacimiento">
+                    @Html.ValidationMessage("FechaNacimiento")
+                </div>
+                <div class="mb-3">
+                    <label for="Sexo">Eliga el sexo:</label>
+                    <select class="form-control" name="Sexo" id="Sexo">
+                        <option value="Elige">Elige</option>
+                        <option value="Macho">Macho</option>
+                        <option value="Hembra">Hembra</option>
+                    </select>
+                    @Html.ValidationMessage("Sexo")
+                </div>
+                <div class="mb-3">
+                    <label for="Especie">Eliga especie:</label>
+                    <select class="form-control" name="Especie" id="Especie">
+                        <option value="Elige">Elige</option>
+                        <option value="Perro">Perro</option>
+                        <option value="Gato">Gato</option>
+                        <option value="Hamster">Hamster</option>
+                        <option value="Loro">Loro</option>
+                    </select>
+                    @Html.ValidationMessage("Especie")
+                </div>
+                <div class="mb-3">
+                    <label for="Raza">Eliga Raza:</label>
+                    <select class="form-control" name="Raza" id="Raza">
+                        <option value="Elige">Elige</option>
+                        <option value="Buldog">Buldog(Perro)</option>
+                        <option value="Pitbul">Pitbul(Perro)</option>
+                        <option value="Criollo">Criello(Perro)</option>
+                        <option value="Persa">Persa(Gato)</option>
+                        <option value="Siames">Siames(Gato)</option>
+                        <option value="Angora">Angora(Gato)</option>
+                        <option value="China">El hámster enano de China(Hamster)</option>
+                        <option value="Ruso">El hámster enano Ruso(Hamster)</option>
+                        <option value="Campbell">El hámster enano de Campbell(Hamster)</option>
+                        <option value="Psittacoidea">Psittacoidea(Loro)</option>
+                        <option value="Cacatuoidea">Cacatuoidea(Loro)</option>
+                        <option value="Strigopoidea">Strigopoidea(Loro)</option>
+                    </select>
+                    @Html.ValidationMessage("Raza")
+                </div>
+                <div class="mb-3">
+                    <label for="Tamano">Tamaño(cm)</label>
+                    <input type="number" class="form-control" name="Tamano" id="NombTamanore" value="@Model.Tamano">
+                    @Html.ValidationMessage("Tamano")
+                </div>
+                <div class="form-group">
+                    <label for="DatosParticulares">Datos particulares</label>
+                    <textarea class="form-control" name="DatosParticulares" id="DatosParticulares" value="@Model.DatosParticulares" rows="5"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="NombreDueño">Nombre de dueño</label>
+                    <input type="text" class="form-control" name="NombreDueño" id="NombreDueño" value="@Model.NombreDueño">
+                    @Html.ValidationMessage("NombreDueño")
+                </div>
+                <div class="mb-3">
+                    <label for="Direccion">Direccion</label>
+                    <input type="text" class="form-control" name="Direccion" id="Direccion" value="@Model.Direccion">
+                    @Html.ValidationMessage("Direccion")
+                </div>
+                <div class="mb-3">
+                    <label for="Telefono">Telefono</label>
+                    <input type="number" class="form-control" name="Telefono" id="Telefono" value="@Model.Telefono">
+                    @Html.ValidationMessage("Telefono")
+                </div>
+                <div class="mb-3">
+                    <label for="Email">E-mail</label>
+                    <input type="email" class="form-control" name="Email" id="Email" value="@Model.Email">
+                    @Html.ValidationMessage("Email")
+                </div>
+
+
+                <button class="btn btn-primary">Guardar</button>
+                <a href="/mascota/index" class="btn btn-link">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>

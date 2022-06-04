@@ -1,0 +1,33 @@
+﻿<div class="container">
+    <h1 id="MainTitulo">Mascotas</h1>
+    <br />
+    <a class="btn btn-primary" href="/mascota/createnew">Nueva mascota</a>
+    <br />
+    <table class="table">
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Sexo</th>
+                <th>Fecha de nacimiento</th>
+                <th>Dueño</th>
+                <th>Telefono</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.MascotaId</td>
+                    <td>@item.Nombre</td>
+                    <td>@item.Sexo</td>
+                    <td>@item.FechaNacimiento</td>
+                    <td>@item.NombreDueño</td>
+                    <td>@item.Telefono</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>
